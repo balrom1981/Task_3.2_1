@@ -15,6 +15,8 @@ public class Post {
         private boolean bookmark;
 
         public class Complain {
+            private boolean canComplain;
+            private int idAuthor;
             private boolean spam;
             private boolean insult;
             private boolean forAdult;
@@ -28,6 +30,7 @@ public class Post {
     }
 
     public class MainInformation {
+        private int idAuthor;
         private String information;
         private String imageUrl;
         private String reference;
@@ -37,9 +40,31 @@ public class Post {
     }
 
     public class Interaction {
-        private boolean likeOrNot;
-        private String comment;
-        private boolean share;
+        private Like like;
+        private Comment comment;
+        private Share share;
+        private int countView;
+
+        public class Like {
+            private boolean canLike;
+            private int idAuthor;
+            private boolean likeOrNot;
+            private int countLike;
+        }
+
+        public class Comment {
+            private boolean canPost;
+            private int idAuthor;
+            private String textComment;
+            private int countComment;
+        }
+
+        public class Share {
+            private boolean canShare;
+            private int idAuthor;
+            private boolean share;
+            private int countShare;
+        }
 
         //               + get/set на все
     }
