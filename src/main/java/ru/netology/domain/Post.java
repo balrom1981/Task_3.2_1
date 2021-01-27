@@ -1,7 +1,8 @@
 package ru.netology.domain;
 
 public class Post {
-    private int id;
+    private int idOwner;
+    private int idPost;
     private Title title;
     private MainInformation mainInformation;
     private Interaction interaction;
@@ -10,13 +11,13 @@ public class Post {
         private String iconUrl;
         private String title;
         private boolean attached;
-        private int time;
+        private int date;
         private Complain complain;
         private boolean bookmark;
 
         public class Complain {
             private boolean canComplain;
-            private int idAuthor;
+            private int idFrom;
             private boolean spam;
             private boolean insult;
             private boolean forAdult;
@@ -30,7 +31,6 @@ public class Post {
     }
 
     public class MainInformation {
-        private int idAuthor;
         private String information;
         private String imageUrl;
         private String reference;
